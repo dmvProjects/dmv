@@ -1,8 +1,7 @@
 ---
-title: Example Title
+title: Стартовая страница
 draft: false
 tags:
-  - example-tag
 date: 2025-11-06
 ---
 
