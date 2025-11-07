@@ -14,7 +14,7 @@ export default ((opts?: Options) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <p>
-          {Жил-был Пёс}{" "}
+          {"Жил-был Пёс"}{" "}
           © {year}
         </p>
         <ul>
