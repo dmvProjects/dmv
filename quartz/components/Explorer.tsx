@@ -50,29 +50,18 @@ const defaultOptions: Options = {
   }, */
   
 
-  sortFn: (a, b) => {
+sortFn: (a, b) => {
   console.log(a)
+  // Folders идут первыми
+  if (a.isFolder && !b.isFolder) return -1;
+  if (!a.isFolder && b.isFolder) return 1;
 
-  // Функция получения даты
-  const getDate = (node) => {
-    const d = node.data?.frontmatter?.date
-    return d ? new Date(d).getTime() : 0
-  }
+  // Оба файла или обе папки: сортируем по дате
+  const dateA = a.data?.frontmatter?.date ? new Date(a.data.frontmatter.date) : new Date(0);
+  const dateB = b.data?.frontmatter?.date ? new Date(b.data.frontmatter.date) : new Date(0);
 
-  // Сначала — папки сверху как было
-  if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
-    const da = getDate(a)
-    const db = getDate(b)
-
-    // Новые выше
-    return db - da
-  }
-
-  if (!a.isFolder && b.isFolder) {
-    return 1
-  } else {
-    return -1
-  }
+  // Сортируем от новой к старой (сначала свежие)
+  return dateB.getTime() - dateA.getTime();
 },
   
   filterFn: (node) => node.slugSegment !== "tags",
