@@ -55,7 +55,7 @@ const defaultOptions: Options = {
 
   // Функция получения даты
   const getDate = (node) => {
-    const d = node.data?.date
+    const d = node.data?.frontmatter?.date
     return d ? new Date(d).getTime() : 0
   }
 
