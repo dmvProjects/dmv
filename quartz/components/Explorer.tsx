@@ -30,6 +30,7 @@ const defaultOptions: Options = {
     return node
   },
   sortFn: (a, b) => {
+    console.log(a)
     // Sort order: folders first, then files. Sort folders and files alphabeticall
     if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
       // numeric: true: Whether numeric collation should be used, such that "1" < "2" < "10"
