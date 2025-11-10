@@ -34,10 +34,13 @@ const defaultOptions: Options = {
     if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
       // numeric: true: Whether numeric collation should be used, such that "1" < "2" < "10"
       // sensitivity: "base": Only strings that differ in base letters compare as unequal. Examples: a ≠ b, a = á, a = A
-      return a.displayName.localeCompare(b.displayName, undefined, {
-        numeric: true,
-        sensitivity: "base",
-      })
+      //return a.displayName.localeCompare(b.displayName, undefined, {
+      //  numeric: true,
+      //  sensitivity: "base",
+      //})
+      const dateA = new Date(a.date ?? a.file?.ctime ?? 0)
+      const dateB = new Date(b.date ?? b.file?.ctime ?? 0)
+      return dateB - dateA
     }
 
     if (!a.isFolder && b.isFolder) {
