@@ -30,7 +30,7 @@ const defaultOptions: Options = {
     return node
   },
 
-  sortFn: (a, b) => {
+/*   sortFn: (a, b) => {
     console.log(a)
     // Sort order: folders first, then files. Sort folders and files alphabeticall
     if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
@@ -47,8 +47,42 @@ const defaultOptions: Options = {
     } else {
       return -1
     }
-  },
-  
+  }, */
+
+sortFn: (a, b) => {
+  // Сначала папки → потом файлы
+  if (a.isFolder !== b.isFolder) return a.isFolder ? -1 : 1
+
+  const getDate = (node) => {
+    const fm = node.data?.frontmatter
+    if (!fm) return null
+
+    // приоритет: updated → date
+    const raw = fm.updated ?? fm.date
+    if (!raw) return null
+
+    // поддержка ISO строк
+    const d = new Date(raw)
+    return isNaN(d.getTime()) ? null : d
+  }
+
+  const da = getDate(a)
+  const db = getDate(b)
+
+  // Оба имеют дату → сортируем по дате
+  if (da && db) return db - da   // новее выше
+
+  // Только `a` имеет дату → пусть будет выше
+  if (da && !db) return -1
+  if (!da && db) return 1
+
+  // fallback: алфавит
+  return a.displayName.localeCompare(b.displayName, undefined, {
+    numeric: true,
+    sensitivity: "base",
+  })
+},
+
   filterFn: (node) => node.slugSegment !== "tags",
   order: ["filter", "map", "sort"],
 }
