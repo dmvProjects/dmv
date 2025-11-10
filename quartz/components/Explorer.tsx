@@ -38,8 +38,8 @@ const defaultOptions: Options = {
       //  numeric: true,
       //  sensitivity: "base",
       //})
-      const dateA = new Date(a.date ?? a.file?.ctime ?? 0)
-      const dateB = new Date(b.date ?? b.file?.ctime ?? 0)
+      const dateA = new Date(a.date ?? a.file?.mtime ?? 0)
+      const dateB = new Date(b.date ?? b.file?.mtime ?? 0)
       return dateB - dateA
     }
 
