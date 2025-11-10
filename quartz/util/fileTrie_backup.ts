@@ -7,18 +7,6 @@ interface FileTrieData {
   filePath: string
 }
 
-function parseMaybeDate(v: any): Date | undefined {
-  if (!v) return undefined
-  if (v instanceof Date) return v
-  // sometimes emitters serialize dates as ISO strings
-  if (typeof v === "string") {
-    const d = new Date(v)
-    if (!isNaN(d.getTime())) return d
-    return undefined
-  }
-  return undefined
-}
-
 export class FileTrieNode<T extends FileTrieData = ContentDetails> {
   isFolder: boolean
   children: Array<FileTrieNode<T>>
@@ -31,21 +19,12 @@ export class FileTrieNode<T extends FileTrieData = ContentDetails> {
   private displayNameOverride?: string
   data: T | null
 
-  // New: cached date for this node. For files this is file's date (if present).
-  // For folders this will be the most recent date among children and index file.
-  date?: Date
-
   constructor(segments: string[], data?: T) {
     this.children = []
     this.slugSegments = segments
     this.data = data ?? null
     this.isFolder = false
     this.displayNameOverride = undefined
-
-    // initialize date from provided data (if any)
-    if (data) {
-      this.date = parseMaybeDate((data as any).date)
-    }
   }
 
   get displayName(): string {
@@ -75,11 +54,6 @@ export class FileTrieNode<T extends FileTrieData = ContentDetails> {
   private makeChild(path: string[], file?: T) {
     const fullPath = [...this.slugSegments, path[0]]
     const child = new FileTrieNode<T>(fullPath, file)
-    // if a file was provided for this child, initialize its date
-    if (file) {
-      const d = parseMaybeDate((file as any).date)
-      if (d) child.date = d
-    }
     this.children.push(child)
     return child
   }
@@ -95,18 +69,9 @@ export class FileTrieNode<T extends FileTrieData = ContentDetails> {
     if (path.length === 1) {
       // base case, we are at the end of the path
       if (segment === "index") {
-        // index file becomes the folder's own data
         this.data ??= file
-        // prefer index file date for folder (but still compare with existing children)
-        const fileDate = parseMaybeDate((file as any).date)
-        if (fileDate) this.date = maxDate(this.date, fileDate)
       } else {
-        const child = this.makeChild(path, file)
-        // set child's date if available
-        const fileDate = parseMaybeDate((file as any).date)
-        if (fileDate) child.date = fileDate
-        // bubble date up
-        this.date = maxDate(this.date, child.date)
+        this.makeChild(path, file)
       }
     } else if (path.length > 1) {
       // recursive case, we are not at the end of the path
@@ -116,9 +81,6 @@ export class FileTrieNode<T extends FileTrieData = ContentDetails> {
       const fileParts = file.filePath.split("/")
       child.fileSegmentHint = fileParts.at(-path.length)
       child.insert(path.slice(1), file)
-
-      // after recursion, ensure our date reflects child's date
-      this.date = maxDate(this.date, child.date)
     }
   }
 
@@ -159,9 +121,6 @@ export class FileTrieNode<T extends FileTrieData = ContentDetails> {
   filter(filterFn: (node: FileTrieNode<T>) => boolean) {
     this.children = this.children.filter(filterFn)
     this.children.forEach((child) => child.filter(filterFn))
-
-    // After filtering children we should refresh our date because children may have been removed
-    this.refreshDateFromChildren()
   }
 
   /**
@@ -170,9 +129,6 @@ export class FileTrieNode<T extends FileTrieData = ContentDetails> {
   map(mapFn: (node: FileTrieNode<T>) => void) {
     mapFn(this)
     this.children.forEach((child) => child.map(mapFn))
-
-    // mapping might have changed child dates or data — refresh
-    this.refreshDateFromChildren()
   }
 
   /**
@@ -211,30 +167,4 @@ export class FileTrieNode<T extends FileTrieData = ContentDetails> {
       .filter(([_, node]) => node.isFolder)
       .map(([path, _]) => path)
   }
-
-  /**
-   * Helper: recompute this.date based on own data and children's dates
-   */
-  private refreshDateFromChildren() {
-    // start with our own data date (for index files)
-    let d: Date | undefined = parseMaybeDate((this.data as any)?.date)
-    for (const c of this.children) {
-      d = maxDate(d, c.date)
-    }
-    this.date = d
-  }
-
-  /**
-   * Public helper to get the node date (undefined if none)
-   */
-  getNodeDate(): Date | undefined {
-    return this.date
-  }
-}
-
-function maxDate(a?: Date, b?: Date): Date | undefined {
-  if (!a && !b) return undefined
-  if (!a) return b
-  if (!b) return a
-  return a.getTime() >= b.getTime() ? a : b
 }

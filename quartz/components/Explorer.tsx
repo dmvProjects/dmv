@@ -29,19 +29,16 @@ const defaultOptions: Options = {
   mapFn: (node) => {
     return node
   },
-  sortFn: (a, b) => {
+/*   sortFn: (a, b) => {
     console.log(a)
     // Sort order: folders first, then files. Sort folders and files alphabeticall
     if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
       // numeric: true: Whether numeric collation should be used, such that "1" < "2" < "10"
       // sensitivity: "base": Only strings that differ in base letters compare as unequal. Examples: a ≠ b, a = á, a = A
-      //return a.displayName.localeCompare(b.displayName, undefined, {
-      //  numeric: true,
-      //  sensitivity: "base",
-      //})
-      const dateA = new Date(a.date ?? a.file?.mtime ?? 0)
-      const dateB = new Date(b.date ?? b.file?.mtime ?? 0)
-      return dateB - dateA
+      return a.displayName.localeCompare(b.displayName, undefined, {
+        numeric: true,
+        sensitivity: "base",
+      })
     }
 
     if (!a.isFolder && b.isFolder) {
@@ -49,7 +46,22 @@ const defaultOptions: Options = {
     } else {
       return -1
     }
+  }, */
+  
+  sortFn: (a, b) => {
+    // folders first
+    if (a.isFolder !== b.isFolder) return a.isFolder ? -1 : 1
+
+    const da = a.getNodeDate()?.getTime() ?? 0
+    const db = b.getNodeDate()?.getTime() ?? 0
+
+    // newest first
+    if (db !== da) return db - da
+
+    // fallback to alphabetic
+    return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: 'base' })
   },
+
   filterFn: (node) => node.slugSegment !== "tags",
   order: ["filter", "map", "sort"],
 }
