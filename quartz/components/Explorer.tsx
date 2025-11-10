@@ -48,41 +48,33 @@ const defaultOptions: Options = {
       return -1
     }
   }, */
+  
 
-sortFn: (a, b) => {
-  // Сначала папки → потом файлы
-  if (a.isFolder !== b.isFolder) return a.isFolder ? -1 : 1
+  sortFn: (a, b) => {
+  console.log(a)
 
+  // Функция получения даты
   const getDate = (node) => {
-    const fm = node.data?.frontmatter
-    if (!fm) return null
-
-    // приоритет: updated → date
-    const raw = fm.updated ?? fm.date
-    if (!raw) return null
-
-    // поддержка ISO строк
-    const d = new Date(raw)
-    return isNaN(d.getTime()) ? null : d
+    const d = node.data?.date
+    return d ? new Date(d).getTime() : 0
   }
 
-  const da = getDate(a)
-  const db = getDate(b)
+  // Сначала — папки сверху как было
+  if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
+    const da = getDate(a)
+    const db = getDate(b)
 
-  // Оба имеют дату → сортируем по дате
-  if (da && db) return db - da   // новее выше
+    // Новые выше
+    return db - da
+  }
 
-  // Только `a` имеет дату → пусть будет выше
-  if (da && !db) return -1
-  if (!da && db) return 1
-
-  // fallback: алфавит
-  return a.displayName.localeCompare(b.displayName, undefined, {
-    numeric: true,
-    sensitivity: "base",
-  })
+  if (!a.isFolder && b.isFolder) {
+    return 1
+  } else {
+    return -1
+  }
 },
-
+  
   filterFn: (node) => node.slugSegment !== "tags",
   order: ["filter", "map", "sort"],
 }
