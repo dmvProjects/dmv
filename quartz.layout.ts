@@ -25,7 +25,7 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
+/*    Component.Flex({
       components: [
         {
           Component: Component.Search(),
@@ -34,12 +34,13 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
         { Component: Component.ReaderMode() },
       ],
-    }),
+    }), */
     Component.Explorer({
       useSavedState: false,
     }),
   ],
   right: [
+    Component.Darkmode(),
     Component.RecentNotes({
       showTags: false,
       limit: 10,
