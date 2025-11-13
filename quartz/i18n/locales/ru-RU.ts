@@ -75,7 +75,7 @@ export default {
     folderContent: {
       folder: "Раздел",
       itemsUnderFolder: ({ count }) =>
-        `${count} замет${getForm(count, "ка", "и", "ок")}`,
+        `${count} замет${getForm(count, "ка", "ки", "ок")}`,
     },
     tagContent: {
       tag: "Тег",
