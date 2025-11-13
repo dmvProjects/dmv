@@ -73,9 +73,9 @@ export default {
       home: "Вернуться на главную страницу",
     },
     folderContent: {
-      folder: "Папка",
+      folder: "Раздел",
       itemsUnderFolder: ({ count }) =>
-        `в этой папке ${count} элемент${getForm(count, "", "а", "ов")}`,
+        `${count} замет${getForm(count, "", "и", "ок")}`,
     },
     tagContent: {
       tag: "Тег",
