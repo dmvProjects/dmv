@@ -90,5 +90,9 @@ export const defaultListPageLayout: PageLayout = {
   ],
   right: [
     Component.Darkmode(),
+    Component.RecentNotes({
+      showTags: false,
+      limit: 10,
+    }),
   ],
 }
