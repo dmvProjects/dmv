@@ -38,6 +38,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer({
       //useSavedState: false,
       title: "Всё, что есть",
+      showTitle: false,
     }),
   ],
   right: [
