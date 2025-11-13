@@ -80,7 +80,7 @@ export default {
     tagContent: {
       tag: "Тег",
       tagIndex: "Индекс тегов",
-      itemsUnderTag: ({ count }) => `с этим тегом ${count} замет{getForm(count, "ка", "ки", "ок")}`,
+      itemsUnderTag: ({ count }) => `с этим тегом ${count} замет${getForm(count, "ка", "ки", "ок")}`,
       showingFirst: ({ count }) =>
         `Показыва${getForm(count, "ется", "ются", "ются")} ${count} тег${getForm(count, "", "а", "ов")}`,
       totalTags: ({ count }) => `Всего ${count} тег${getForm(count, "", "а", "ов")}`,
