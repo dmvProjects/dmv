@@ -12,7 +12,18 @@
 /* Меньший шрифт для тегов */
 .section .tags li a.tag-link {
   font-size: 0.8em;   /* или 12px */
-  color: #a3a384;        /* по желанию */
+  color: #777;        /* по желанию */
+}
+
+
+.breadcrumb-container .breadcrumb-element:first-child a {
+  font-size: 0; /* скрываем оригинальный текст */
+  position: relative;
+}
+
+.breadcrumb-container .breadcrumb-element:first-child a::after {
+  content: "Начало"; /* ← сюда пиши свой текст */
+  font-size: 1rem; /* возвращаем нормальный размер */
 }
 
 // put your custom CSS here!
