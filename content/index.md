@@ -13,4 +13,11 @@ date: 2025-11-11
 [Тэги](https://жил-был-пёс.рф/tags/)
 
 
+```markdown
+<div style="display: flex; justify-content: space-between; text-align: center; margin: 1em 0;">
+  <a href="/ссылка1">← Назад</a>
+  <a href="/ссылка2">Вперёд →</a>
+</div>
+```
+
 ![[Pios.png]]
