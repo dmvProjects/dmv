@@ -37,7 +37,6 @@ export const defaultContentPageLayout: PageLayout = {
     }), */
     Component.Explorer({
       //useSavedState: false,
-      title: "Всё, что есть",
       folderDefaultState: "open",
     }),
   ],
@@ -75,7 +74,7 @@ export const defaultListPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
+    /*Component.Flex({
       components: [
         {
           Component: Component.Search(),
@@ -83,8 +82,13 @@ export const defaultListPageLayout: PageLayout = {
         },
         { Component: Component.Darkmode() },
       ],
+    }),*/
+    Component.Explorer({
+      //useSavedState: false,
+      folderDefaultState: "open",
     }),
-    Component.Explorer(),
   ],
-  right: [],
+  right: [
+    Component.Darkmode(),
+  ],
 }
