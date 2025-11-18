@@ -75,6 +75,7 @@ const config: QuartzConfig = {
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.Remark42({ host: "http://dmv-perm.ru:65430", site_id: "жил-был-пёс", no_footer: true }),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
