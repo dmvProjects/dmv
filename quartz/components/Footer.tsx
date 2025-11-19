@@ -13,7 +13,6 @@ export default ((opts?: Options) => {
     const links = opts?.links ?? []
     return (
       <footer class={`${displayClass ?? ""}`}>
-        <div id="remark42"></div>
         <p>
           {"Жил-был Пёс"}{" "}
           © {year}
