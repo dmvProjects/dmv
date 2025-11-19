@@ -83,6 +83,7 @@ const config: QuartzConfig = {
         simple_view: true, 
         themeVariables: {
         '--rc-background-color': '#e6e4dc', // фон комментариев
+        '--color5': '#e6e4dc', // фон комментариев
         '--rc-border-color': '#ccc',        // цвет рамки
         '--rc-text-color': '#222',          // цвет текста
         '--rc-link-color': '#556699'        // цвет ссылок
