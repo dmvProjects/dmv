@@ -67,7 +67,7 @@ export const defaultContentPageLayout: PageLayout = {
     }),
   ], */
   afterBody: [
-      Remark42Comments(),  // ← вставляем сюда
+      Component.Remark42Comments(),  // ← вставляем сюда
     ],
 }
 
