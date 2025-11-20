@@ -25,3 +25,8 @@
   content: "Начало"; /* ← сюда пиши свой текст */
   font-size: 1rem; /* возвращаем нормальный размер */
 }
+
+.explorer a {
+  font-family: var(--headerFont) !important;
+  color: #555 !important;
+}
