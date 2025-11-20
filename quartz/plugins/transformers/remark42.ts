@@ -64,15 +64,21 @@ export const Remark42: QuartzTransformerPlugin<Options> = (opts?: Options) => {
 
 
   // @plodibre: Listen for theme changes and sync r42 if it changes
-  const buttonListener: string = `
-  document.querySelector('#darkmode-toggle').addEventListener('click', (_e) => {
-    let currentTheme = document.documentElement.getAttribute('saved-theme')
-    currentTheme = currentTheme === 'dark' ? 'light' : 'dark'
-    if(window.REMARK42)
-      window.REMARK42.changeTheme(currentTheme)
-  })
-`
-  scripts.push({ script: buttonListener, loadTime: "afterDOMReady", contentType: "inline" })
+  const themeObserver: string = `
+    const target = document.documentElement;
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if(mutation.type === 'attributes' && mutation.attributeName === 'saved-theme') {
+          const newTheme = target.getAttribute('saved-theme');
+          if(window.REMARK42) {
+            window.REMARK42.changeTheme(newTheme);
+          }
+        }
+      });
+    });
+    observer.observe(target, { attributes: true });
+  `
+  scripts.push({ script: themeObserver, loadTime: "afterDOMReady", contentType: "inline" })
 
   return {
     name: "Remark42",
