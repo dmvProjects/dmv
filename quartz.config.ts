@@ -77,11 +77,11 @@ const config: QuartzConfig = {
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.Remark42({ 
         host: "https://dmv-perm.ru:65430", 
-        site_id: "жил-был-пёс", 
+        site_id: "xn-----blcsksc7as0h3c.xn--p1ai", 
         no_footer: true, components: ["embed"], 
         locale: "ru", 
         simple_view: true, 
-        show_rss_subscription: false;
+        show_rss_subscription: false,
       }),
     ],
     filters: [Plugin.RemoveDrafts()],
