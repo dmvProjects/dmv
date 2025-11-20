@@ -12,35 +12,19 @@ export default ((opts?: Options) => {
     const year = new Date().getFullYear()
     const links = opts?.links ?? []
     return (
-      <>
-        <footer class={`${displayClass ?? ""}`}>
-          <p>
-            {"Жил-был Пёс"} © {year}
-          </p>
-          <ul>
-            {Object.entries(links).map(([text, link]) => (
-              <li>
-                <a href={link}>{text}</a>
-              </li>
-            ))}
-          </ul>
-        </footer>
-
-        {/* Скрипт для Remark42 */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              var remark_config = {
-                  theme: window.matchMedia && window.matchMedia('(prefers-color-scheme:dark)').matches ? "dark" : "light",
-              };
-              window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change', event => {
-                  const newColorScheme = event.matches ? "dark" : "light";
-                  window.REMARK42.changeTheme(newColorScheme);
-              });
-            `,
-          }}
-        ></script>
-      </>
+      <footer class={`${displayClass ?? ""}`}>
+        <p>
+          {"Жил-был Пёс"}{" "}
+          © {year}
+        </p>
+        <ul>
+          {Object.entries(links).map(([text, link]) => (
+            <li>
+              <a href={link}>{text}</a>
+            </li>
+          ))}
+        </ul>
+      </footer>
     )
   }
 
