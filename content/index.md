@@ -5,6 +5,7 @@ date: 2025-11-11
 ---
 Дневник обычного человека. Заметки, мысли, бред.
 Не знаю, как ты сюда попал. Почитай, если хочешь.
+[[yandex_b08d05404f98dbd8.html]]
 
 
 <div style="display: flex; justify-content: center; gap: 8em; margin: 1em 0;">
