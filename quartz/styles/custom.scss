@@ -30,9 +30,13 @@
   font-family: var(--headerFont) !important;
   color: var(--secondary) !important;
   transition: color 0.2s;
-  border-bottom: 1px solid #a3a3a3;
+  /* border-bottom: 1px solid #a3a3a3;
   padding-bottom: 4px;
-  margin-bottom: 4px;
+  margin-bottom: 4px; */
+  display: block;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
 }
 
 .explorer-content ul li > a:hover {
