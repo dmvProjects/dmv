@@ -29,7 +29,10 @@
 .explorer-content ul li > a {
   font-family: var(--headerFont) !important;
   color: var(--secondary) !important;
-  transition: color 0.2s; /* плавный переход цвета */
+  transition: color 0.2s;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .explorer-content ul li > a:hover {
