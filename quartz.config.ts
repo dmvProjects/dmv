@@ -80,7 +80,7 @@ const config: QuartzConfig = {
         site_id: "xn-----blcsksc7as0h3c.xn--p1ai", 
         no_footer: true, components: ["embed"], 
         locale: "ru", 
-        simple_view: true, 
+        //simple_view: true, 
         show_rss_subscription: false,
       }),
     ],
