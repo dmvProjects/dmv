@@ -29,4 +29,9 @@
 .explorer-content ul li > a {
   font-family: var(--headerFont) !important;
   color: #182e3d !important;
+  transition: color 0.3s; /* плавный переход цвета */
+}
+
+.explorer-content ul li > a:hover {
+    color: #284b63 !important; /* цвет при наведении */
 }
