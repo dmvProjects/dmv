@@ -5,6 +5,16 @@ date: 2025-11-11
 ---
 ![[Pios.png]]
 
+<RecentNotes />
+
+<div id="recent-notes-container"></div>
+
+<script>
+  // вставляем RecentNotes через JS
+  import { RecentNotes } from './RecentNotes';
+  ReactDOM.render(<RecentNotes />, document.getElementById('recent-notes-container'));
+</script>
+
 Дневник обычного человека. Заметки, мысли, бред.
 Не знаю, как ты сюда попал. Почитай, если хочешь.
 
@@ -24,4 +34,3 @@ date: 2025-11-11
 
 ---
 
-[[RecentNotes]]
