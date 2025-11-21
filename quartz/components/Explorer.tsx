@@ -144,7 +144,6 @@ export default ((userOpts?: Partial<Options>) => {
         <div class="recent-notes-wrapper">
           <RecentNotes />
         </div>
-      </div>
         <template id="template-file">
           <li>
             <a href="#"></a>
