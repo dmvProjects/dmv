@@ -135,3 +135,8 @@ a.internal {
   line-height: 1.1em;
   overflow: hidden;
 }
+
+/* фикс цвета разделителя в светлой теме */
+:root[saved-theme="light"] hr {
+    background-color: gray;
+}
