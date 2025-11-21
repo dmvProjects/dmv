@@ -8,7 +8,7 @@
 
 /* Меньший шрифт для тегов на странице тегов */
 a.internal.tag-link {
-  font-size: 1.2rem;
+  font-size: 0.9em;
 }
 
 /* Меньший шрифт для тегов под имененм страницы*/
@@ -28,7 +28,7 @@ a.internal.tag-link {
   font-size: 1rem;
 }
 
-/* компактный режим, шрифт и разделители в проводнике */
+/* настройки проводника + компактный режим */
 .explorer .title-button.desktop-explorer {
   display: none !important;
 }
