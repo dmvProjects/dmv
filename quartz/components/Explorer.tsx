@@ -8,6 +8,7 @@ import { i18n } from "../i18n"
 import { FileTrieNode } from "../util/fileTrie"
 import OverflowListFactory from "./OverflowList"
 import { concatenateResources } from "../util/resources"
+import RecentNotes from "./RecentNotes"  // путь к вашему компоненту RecentNotes
 
 type OrderEntries = "sort" | "filter" | "map"
 
@@ -139,6 +140,9 @@ export default ((userOpts?: Partial<Options>) => {
         </button>
         <div id={id} class="explorer-content" aria-expanded={false} role="group">
           <OverflowList class="explorer-ul" />
+        </div>
+        <div class="recent-notes-wrapper">
+          <RecentNotes />
         </div>
         <template id="template-file">
           <li>
