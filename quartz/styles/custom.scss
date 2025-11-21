@@ -6,10 +6,10 @@
   color: #666;
 }
 
-/* Меньший шрифт для тегов на странице тегов */
+/* Меньший шрифт для тегов на странице тегов 
 a.internal.tag-link {
   font-size: 1.2rem;
-}
+}*/
 
 /* Меньший шрифт для тегов под имененм страницы*/
 .section .tags li a.tag-link {
@@ -58,6 +58,7 @@ a.internal.tag-link {
 /* компактный режим недавних заметок */
 .recent-notes>ul.recent-ul>li {
   margin:0.5rem 0;
+  padding-left: 1rem;
 }
 
 .recent-notes>ul.recent-ul>li .section>.desc>h3>a {
@@ -70,5 +71,4 @@ a.internal.tag-link {
 
 .recent-notes > h3 {
   font-size: 1.2rem;  /* размер заголовка */
-  padding-left: 1rem;
 }
