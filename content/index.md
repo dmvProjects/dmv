@@ -23,4 +23,20 @@ date: 2025-11-11
 </div>
 
 
-<RecentNotes />
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Ищем div по классу
+    const original = document.querySelector('.recent-notes.desktop-only');
+
+    if (original) {
+        // Клонируем элемент со всем содержимым
+        const clone = original.cloneNode(true);
+
+        // Куда вставляем (пример — в конец body)
+        document.body.appendChild(clone);
+
+        // Или вставка в определённый контейнер:
+        // document.querySelector('.center').prepend(clone);
+    }
+});
+</script>
