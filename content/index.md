@@ -22,5 +22,5 @@ date: 2025-11-11
   <a href="tags/">Теги</a>
 </div>
 
----
 
+<RecentNotes />
