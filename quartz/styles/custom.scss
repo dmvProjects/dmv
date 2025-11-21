@@ -1,29 +1,31 @@
 @use "./base.scss";
 
-.explorer .title-button.desktop-explorer {
-  display: none !important;
-}
-
+/* время публикации заметки */
 .section .meta time {
-  font-size: 0.8em;   /* или можно 12px, 0.75em и т.д. */
-  color: #666;        /* по желанию, сделать чуть светлее */
+  font-size: 0.8em;
+  color: #666;
 }
 
 /* Меньший шрифт для тегов */
 .section .tags li a.tag-link {
-  font-size: 0.8em;   /* или 12px */
-  color: #777;        /* по желанию */
+  font-size: 0.8em;
+  color: #777;
 }
 
-
+/* настройка пути файлов */
 .breadcrumb-container .breadcrumb-element:first-child a {
   font-size: 0; /* скрываем оригинальный текст */
   position: relative;
 }
 
 .breadcrumb-container .breadcrumb-element:first-child a::after {
-  content: "Начало"; /* ← сюда пиши свой текст */
-  font-size: 1rem; /* возвращаем нормальный размер */
+  content: "Начало";
+  font-size: 1rem;
+}
+
+/* компактный режим, шрифт и разделители в проводнике */
+.explorer .title-button.desktop-explorer {
+  display: none !important;
 }
 
 .explorer-content ul li > a {
@@ -37,4 +39,17 @@
 
 .explorer-content ul li > a:hover {
     color: var(--tertiary) !important; /* цвет при наведении */
+}
+
+/* компактный режим недавних заметок */
+.recent-notes>ul.recent-ul>li {
+  margin:0.5rem 0;
+}
+
+.recent-notes>ul.recent-ul>li .section>.desc>h3>a {
+  font-size: 1rem;
+}
+
+.recent-notes>ul.recent-ul>li .section>.meta {
+  line-height: 50%;
 }
