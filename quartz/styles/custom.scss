@@ -73,19 +73,14 @@ a.internal.tag-link {
   font-size: 1.2rem;  /* размер заголовка */
 }
 
-.simple-player {
-  background: #d6d9ce;
-  padding: 10px 15px;
-  border-radius: 10px;
-  display: inline-block;
+.audio-row {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* расстояние между плеером и названием */
+  margin: 10px 0;
 }
 
-.simple-player button {
-  background: #8e918a;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  font-size: 14px;
-  border-radius: 8px;
-  cursor: pointer;
+.audio-row audio {
+  width: 200px;   /* ширина мини-плеера */
+  height: 32px;   /* фиксированная высота делает его аккуратным */
 }

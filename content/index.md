@@ -12,32 +12,11 @@ date: 2025-11-11
   <a href="tags/">Теги</a>
 </div>
 
-<a href="/files/Жил-был-пёс_-_Ой_там_на_гори.mp3"> Ой, там на горе </a>
-<audio controls>
-  <source src="/files/Жил-был-пёс_-_Ой_там_на_гори.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-
-<div class="simple-player">
-  <button id="play-btn">▶ Play</button>
+<div class="audio-row">
+  <audio controls>
+    <source src="/files/Жил-был-пёс_-_Ой_там_на_гори.mp3" type="audio/mpeg">
+  </audio>
+  <span class="audio-title">Ой, там на горі (Жил-был пёс OST)</span>
 </div>
-
-<audio id="audio" src="/files/Жил-был-пёс_-_Ой_там_на_гори.mp3"></audio>
-
-<script>
-  const audio = document.getElementById("audio");
-  const playBtn = document.getElementById("play-btn");
-
-  playBtn.onclick = () => {
-    if (audio.paused) {
-      audio.play();
-      playBtn.textContent = "⏸ Pause";
-    } else {
-      audio.pause();
-      playBtn.textContent = "▶ Play";
-    }
-  };
-</script>
 
 ![[Pios.png]]
