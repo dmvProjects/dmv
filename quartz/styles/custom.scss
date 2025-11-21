@@ -73,6 +73,7 @@ a.internal.tag-link {
   font-size: 1.2rem;  /* размер заголовка */
 }
 
+/* плеер */
 .audio-row {
   display: flex;
   align-items: center;
@@ -81,6 +82,12 @@ a.internal.tag-link {
 }
 
 .audio-row audio {
-  width: 200px;   /* ширина мини-плеера */
+  width: 300px;   /* ширина мини-плеера */
   height: 32px;   /* фиксированная высота делает его аккуратным */
+}
+
+.audio-row .audio-title {
+  font-style: italic;     /* курсив */
+  font-size: 0.9em;       /* чуть меньше обычного */
+  opacity: 0.85;          /* лёгкое смягчение цвета — красиво смотрится */
 }
