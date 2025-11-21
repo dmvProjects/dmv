@@ -24,3 +24,24 @@ date: 2025-11-11
 
 ---
 
+.center::before {
+    content: "";
+    display: block;
+    width: 100%;
+    /* вместо фиксированной высоты используем min-height, чтобы блок мог "тянуться" */
+    min-height: 200px; 
+    max-height: 400px; /* ограничение сверху, чтобы не было слишком большого блока */
+    background-color: red;
+    margin-bottom: 1rem; /* расстояние до текста */
+}
+
+.center {
+    position: relative;
+    padding-top: 7rem; /* пространство сверху для визуального выравнивания */
+}
+
+.page > #quartz-body .page-header {
+  margin: 2rem 0 0;
+}
+
+<div class="left sidebar">
