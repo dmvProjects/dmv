@@ -72,3 +72,20 @@ a.internal.tag-link {
 .recent-notes > h3 {
   font-size: 1.2rem;  /* размер заголовка */
 }
+
+.simple-player {
+  background: #d6d9ce;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.simple-player button {
+  background: #8e918a;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
