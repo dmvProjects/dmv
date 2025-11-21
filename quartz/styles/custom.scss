@@ -100,14 +100,14 @@ a.internal {
 }
 
 .audio-row audio {
-  flex: 0 0 70%;   /* 70% ширины контейнера */
+  flex: 0 0 50%;   /* 70% ширины контейнера */
   background-color: #abcfff;
   border-radius: 14px;
   height:32px
 }
 
 .audio-row .audio-title {
-  flex: 0 0 30%;   /* оставшиеся 30% */
+  flex: 0 0 50%;   /* оставшиеся 30% */
   font-style: italic;     /* курсив */
   font-size: 0.9em;       /* чуть меньше обычного */
   opacity: 0.85;          /* лёгкое смягчение цвета — красиво смотрится */
