@@ -6,7 +6,12 @@
   color: #666;
 }
 
-/* Меньший шрифт для тегов */
+/* Меньший шрифт для тегов на странице тегов */
+a.internal.tag-link {
+  font-size: 1.2rem;
+}
+
+/* Меньший шрифт для тегов под имененм страницы*/
 .section .tags li a.tag-link {
   font-size: 0.8em;
   color: #777;
@@ -41,6 +46,15 @@
     color: var(--tertiary) !important; /* цвет при наведении */
 }
 
+.folder-container div > a {
+  font-size: 1.2rem;  /* размер имени папки */
+  margin-bottom: 4%;
+}
+
+.folder-icon {
+  display: none; /* скрыть иконку разворачивания */
+}
+
 /* компактный режим недавних заметок */
 .recent-notes>ul.recent-ul>li {
   margin:0.5rem 0;
@@ -54,10 +68,7 @@
   line-height: 50%;
 }
 
-.folder-container div > a {
-  font-size: 1.3rem;
-}
-
-a.internal.tag-link {
-  font-size: 1.2rem;
+.recent-notes > h3 {
+  font-size: 1.2rem;  /* размер заголовка */
+  padding-left: 1rem;
 }
