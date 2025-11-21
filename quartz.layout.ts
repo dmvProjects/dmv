@@ -23,7 +23,18 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
   ],
   left: [
-    Component.PageTitle(),
+    /*Component.PageTitle(),
+    Component.Darkmode(),*/
+    Component.Flex({
+      components: [
+        { Component: Component.PageTitle() },
+        { Component: Component.Darkmode() },
+      ],
+    }),
+    Component.RecentNotes({
+      showTags: false,
+      limit: 5,
+    }),
     Component.MobileOnly(Component.Spacer()),
 /*    Component.Flex({
       components: [
@@ -41,11 +52,7 @@ export const defaultContentPageLayout: PageLayout = {
     }),
   ],
   right: [
-    Component.Darkmode(),
-    Component.RecentNotes({
-      showTags: false,
-      limit: 10,
-    }),
+
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
