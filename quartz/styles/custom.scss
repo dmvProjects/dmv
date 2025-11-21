@@ -100,14 +100,18 @@ a.internal {
 }
 
 .audio-row audio {
-  width:300px;
+  flex: 0 0 70%;   /* 70% ширины контейнера */
   background-color: #abcfff;
   border-radius: 14px;
   height:32px
 }
 
 .audio-row .audio-title {
+  flex: 0 0 30%;   /* оставшиеся 30% */
   font-style: italic;     /* курсив */
   font-size: 0.9em;       /* чуть меньше обычного */
   opacity: 0.85;          /* лёгкое смягчение цвета — красиво смотрится */
+  overflow: hidden;    /* чтобы текст не вылезал */
+  text-overflow: ellipsis; /* если текст длинный — обрезаем с "..." */
+  white-space: nowrap;
 }

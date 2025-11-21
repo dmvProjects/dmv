@@ -5,6 +5,9 @@ date: 2025-11-11
 ---
 ![[Pios.png]]
 
+Дневник обычного человека. Заметки, мысли, бред.
+Не знаю, как ты сюда попал. Почитай, если хочешь.
+
 <div class="audio-row">
   <audio controls>
     <source src="/files/Жил-был-пёс_-_Ой_там_на_гори.mp3" type="audio/mpeg">
@@ -12,9 +15,6 @@ date: 2025-11-11
   </audio>
   <span class="audio-title">Ой, там на горі (Жил-был пёс OST)</span>
 </div>
-
-Дневник обычного человека. Заметки, мысли, бред.
-Не знаю, как ты сюда попал. Почитай, если хочешь.
 
 ---
 <div style="display: flex; justify-content: center; gap: 8em; margin: 1em 0; font-size: 1.2em;">
