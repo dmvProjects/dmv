@@ -30,6 +30,11 @@ a.internal.tag-link {
   color: #777;
 }
 
+/* Убрать заливку внутренних ссылок */
+a.internal {
+  background-color: transparent !important;
+}
+
 /* настройка пути файлов */
 .breadcrumb-container .breadcrumb-element:first-child a {
   font-size: 0; /* скрываем оригинальный текст */
@@ -95,8 +100,10 @@ a.internal.tag-link {
 }
 
 .audio-row audio {
-  width: 300px;   /* ширина мини-плеера */
-  height: 32px;   /* фиксированная высота делает его аккуратным */
+  width:300px;
+  background-color: #abcfff;
+  border-radius: 14px;
+  height:32px
 }
 
 .audio-row .audio-title {
