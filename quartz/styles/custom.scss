@@ -1,5 +1,18 @@
 @use "./base.scss";
 
+/* заголовок */
+.left.sidebar .page-title a {
+  font-size: 1.2em;
+}
+
+:root[saved-theme="light"] .left.sidebar .page-title a {
+  color: #8b2e3d !important;
+}
+
+:root[saved-theme="dark"] .left.sidebar .page-title a {
+  color:#d4b97f !important;
+}
+
 /* время публикации заметки */
 .section .meta time {
   font-size: 0.8em;
