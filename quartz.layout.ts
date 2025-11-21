@@ -31,10 +31,10 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.RecentNotes({
+    Component.DesktopOnly(Component.RecentNotes({
       showTags: false,
       limit: 5,
-    }),
+    })),
     Component.MobileOnly(Component.Spacer()),
 /*    Component.Flex({
       components: [
@@ -88,10 +88,10 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.RecentNotes({
+    Component.DesktopOnly(Component.RecentNotes({
       showTags: false,
       limit: 5,
-    }),
+    })),
     Component.MobileOnly(Component.Spacer()),
     /*Component.Flex({
       components: [
