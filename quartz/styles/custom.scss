@@ -144,16 +144,19 @@ a.internal {
 }
 
 /* фиксы мобильного интерфейса */
-@media (max-width: 800px) {
-  .left.sidebar::before {
-    width: 40%;
-    min-width: 40%;
+@media (max-width:800px) {
+  .left.sidebar:before {
+    width:40%;
+    min-width:40%;
+    height: 100%;
   }
   .article-title {
-    margin: 0 0 0;
+    margin:0 0 0;
   }
-
   .explorer {
-    margin-top: 0;
+    margin-top:0;
+  }
+  .audio-row audio {
+  width:100%;
   }
 }
