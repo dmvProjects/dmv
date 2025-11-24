@@ -1,13 +1,15 @@
 @use "./base.scss";
 
 /* изображение над сайдбаром */
-.left.sidebar::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 184px;     /* минимальная высота блока */
-    background-size: cover;       /* картинка растягивается по блоку */
-    background-position: center;  /* центрирование картинки */
+.left.sidebar:before {
+  content:"";
+  background-size:cover;
+  width:100%;
+  height:184px;
+  display:block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
 }
 
 :root[saved-theme="light"] .left.sidebar::before {
@@ -113,30 +115,45 @@ a.internal {
 
 /* плеер */
 .audio-row {
-  display: flex;
-  align-items: center;
-  gap: 12px; /* расстояние между плеером и названием */
-  margin: 10px 0;
+  align-items:center;
+  gap:4px;
+  margin:10px 0;
+  display:flex;
+  align-items: flex-start; /* прижать к левому краю */
+  flex-direction: column; /* вертикальная колонка */
+  width: 100%; /* чтобы занимало всю ширину */
 }
-
 .audio-row audio {
-  flex: 0 0 60%;   /* 70% ширины контейнера */
-  background-color: #abcfff;
-  border-radius: 14px;
-  height:32px
+  background-color:#abcfff;
+  border-radius:14px;
+  width: 50%; /* плеер растягивается на всю ширину контейнера */
+  height:32px;
 }
-
 .audio-row .audio-title {
-  flex: 0 0 40%;   /* оставшиеся 30% */
-  font-style: italic;     /* курсив */
-  font-size: 0.9em;       /* чуть меньше обычного */
-  opacity: 0.85;          /* лёгкое смягчение цвета — красиво смотрится */
-  max-height: 2.2em;  /* 2 строки * line-height */
-  line-height: 1.1em;
-  overflow: hidden;
+  opacity:.85;
+  max-height:2.2em;
+  font-size:.9em;
+  font-style:italic;
+  line-height:1.1em;
+  overflow:hidden
 }
 
 /* фикс цвета разделителя в светлой теме */
 :root[saved-theme="light"] hr {
     background-color: gray;
+}
+
+/* фиксы мобильного интерфейса */
+@media (max-width: 800px) {
+  .left.sidebar::before {
+    width: 40%;
+    min-width: 40%;
+  }
+  .article-title {
+    margin: 0 0 0;
+  }
+
+  .explorer {
+    margin-top: 0;
+  }
 }
