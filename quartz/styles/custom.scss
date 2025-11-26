@@ -74,11 +74,15 @@ a.internal {
 
 .explorer-content ul li > a {
   font-family: var(--headerFont) !important;
-  color: var(--secondary) !important;
+  color: var(--secondary);
   transition: color 0.2s;
   border-bottom: 1px solid #a3a3a3;
   padding-bottom: 4px;
   margin-bottom: 4px;
+}
+
+.explorer-content ul li > a.active {
+  color: var(--secondary);
 }
 
 .explorer-content ul li > a:hover {
@@ -93,6 +97,14 @@ a.internal {
 
 .folder-icon {
   display: none; /* скрыть иконку разворачивания */
+}
+
+:root[saved-theme="light"] .explorer-content ul li > a.active {  /* цвет активной страницы */
+  color: #8b2e3d;
+}
+
+:root[saved-theme="dark"] .explorer-content ul li > a.active {
+  color: #d4b97f;
 }
 
 /* компактный режим недавних заметок */
