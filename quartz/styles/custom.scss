@@ -81,6 +81,10 @@ a.internal {
   margin-bottom: 4px;
 }
 
+.explorer-content .folder-outer > ul {
+  border-left: 1px solid var(--gray);  /* фикс цвета левой полосы в светлой теме */
+}
+
 .explorer-content ul li > a.active {
   color: var(--secondary);
 }
