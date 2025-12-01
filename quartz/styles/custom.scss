@@ -176,3 +176,11 @@ a.internal {
   width:100%;
   }
 }
+
+ul.toc-content.overflow > li > a {
+  font-family: var(--headerFont);
+}
+
+.backlinks > ul.overflow > li > a {
+  font-family: var(--headerFont);
+}
