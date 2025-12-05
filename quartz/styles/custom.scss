@@ -175,7 +175,14 @@ li.section-li {
 
 li.section-li > .section {   
   grid-template-columns: 8em 1fr 1fr;
+}
+
+:root[saved-theme="light"] li.section-li > .section {
   border-bottom: 1px solid lightgray;
+}
+
+:root[saved-theme="dark"] li.section-li > .section {
+  border-bottom: 1px solid #404040;
 }
 
 li.section-li:last-child > .section  {   
