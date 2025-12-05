@@ -177,12 +177,17 @@ li.section-li > .section {
   grid-template-columns: 8em 1fr 1fr;
 }
 
-:root[saved-theme="light"] li.section-li > .section {
-  border-bottom: 1px solid lightgray;
+:root[saved-theme=light] li.section-li>.section {
+  border-bottom:1px solid #d3d3d3
 }
-
-:root[saved-theme="dark"] li.section-li > .section {
-  border-bottom: 1px solid #404040;
+:root[saved-theme=dark] li.section-li>.section {
+  border-bottom:1px solid #404040
+}
+:root[saved-theme=light] li.section-li:last-child>.section {
+  border-bottom:none
+}
+:root[saved-theme=dark] li.section-li:last-child>.section {
+  border-bottom:none
 }
 
 li.section-li:last-child > .section  {   
