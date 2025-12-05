@@ -184,3 +184,18 @@ ul.toc-content.overflow > li > a {
 .backlinks > ul.overflow > li > a {
   font-family: var(--headerFont);
 }
+
+/* минималисточность на странице всех заметок */
+
+li.section-li {
+  margin-bottom: 0;
+}
+
+li.section-li > .section {   
+  grid-template-columns: 8em 1fr 1fr;
+  border-bottom: 1px solid lightgray;
+}
+
+li.section-li:last-child > .section  {   
+  border-bottom: none;
+}
