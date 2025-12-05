@@ -185,7 +185,7 @@ ul.toc-content.overflow > li > a {
   font-family: var(--headerFont);
 }
 
-/* минималисточность на странице всех заметок */
+/* минималисточность на странице всех заметок и тегов */
 
 li.section-li {
   margin-bottom: 0;
@@ -198,4 +198,12 @@ li.section-li > .section {
 
 li.section-li:last-child > .section  {   
   border-bottom: none;
+}
+
+ul.section-ul {
+  margin-top: 0em;
+}
+
+div.popover-hint div div div.page-listing > p {
+  margin: 4px;
 }
