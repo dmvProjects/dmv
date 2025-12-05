@@ -159,24 +159,6 @@ a.internal {
     background-color: lightgray;
 }
 
-/* фиксы мобильного интерфейса */
-@media (max-width:800px) {
-  .left.sidebar:before {
-    width:40%;
-    min-width:40%;
-    height: 100%;
-  }
-  .article-title {
-    margin:0 0 0;
-  }
-  .explorer {
-    margin-top:0;
-  }
-  .audio-row audio {
-  width:100%;
-  }
-}
-
 ul.toc-content.overflow > li > a {
   font-family: var(--headerFont);
 }
@@ -211,4 +193,25 @@ div.popover-hint div div div.page-listing > p {
 
 div.popover-hint div div h2 {
   margin: 0;
+}
+
+/* фиксы мобильного интерфейса */
+@media (max-width:800px) {
+  .left.sidebar:before {
+    width:40%;
+    min-width:40%;
+    height: 100%;
+  }
+  .article-title {
+    margin:0 0 0;
+  }
+  .explorer {
+    margin-top:0;
+  }
+  .audio-row audio {
+  width:100%;
+  }
+  li.section-li > .section {   
+  grid-template-columns: 8em 1fr;
+  }
 }
