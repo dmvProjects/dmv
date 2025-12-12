@@ -213,10 +213,11 @@ div.popover-hint div div h2 {
   border: 1px solid var(--spoiler-border);
   border-radius: 10px;
   box-shadow: var(--spoiler-shadow);">
-<details>
-<summary style="cursor: pointer; font-weight: 600;">Открыть</summary>
+<details class="spoiler">
+<summary></summary>
 <div style="margin-top: 16px; margin-left: 26px;">
-Текст под спойлером.
+
+Текст.
 </div>
 </details>
 </div>
