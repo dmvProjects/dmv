@@ -233,6 +233,19 @@ div.popover-hint div div h2 {
   --spoiler-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
+.spoiler summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.spoiler summary::after {
+  content: "Открыть спойлер";
+}
+
+.spoiler[open] summary::after {
+  content: "Закрыть спойлер";
+}
+
 /* фиксы мобильного интерфейса */
 @media (max-width:800px) {
   .left.sidebar:before {
