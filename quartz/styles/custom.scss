@@ -226,12 +226,14 @@ div.popover-hint div div h2 {
   --spoiler-bg: #dfddd3;
   --spoiler-border: #d7d4cf;
   --spoiler-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  --spoiler-overlay: rgba(0,0,0,0.05);
 }
 
 :root[saved-theme="dark"] {
   --spoiler-bg: #232937;
   --spoiler-border: #1b1e26;
   --spoiler-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  --spoiler-overlay: rgba(255,255,255,0.05);
 }
 
 .spoiler summary {
@@ -245,6 +247,44 @@ div.popover-hint div div h2 {
 
 .spoiler[open] summary::after {
   content: "Закрыть спойлер";
+}
+
+/* инлайн спойлер  <span class="inline_spoiler">скрытое слово</span> */
+.inline_spoiler {
+  color: transparent;
+  background: var(--spoiler-overlay);
+  padding: 0 3px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: color 0.2s;
+  outline: none;
+  position: relative;
+  display: inline-block;
+}
+
+.inline_spoiler:hover,
+.inline_spoiler:focus {
+  color: inherit;
+  background: transparent;
+}
+
+.inline_spoiler::before {
+  content: "наведи";
+  color: #888;
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  pointer-events: none;               
+  transition: opacity 0.2s;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inline_spoiler:focus::before,
+.inline_spoiler:hover::before {
+  opacity: 0;
 }
 
 /* фиксы мобильного интерфейса */
