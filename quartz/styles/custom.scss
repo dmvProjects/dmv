@@ -271,6 +271,8 @@ div.popover-hint div div h2 {
 .inline_spoiler::before {
   content: "наведи";
   color: #888;
+  font-size: 12px;
+  font-style: italic;
   position: absolute;
   left: 0;
   top: 0;
