@@ -16,7 +16,6 @@
     background-image: url('/files/day.png');
 }
 
-/* Тёмная тема */
 :root[saved-theme="dark"] .left.sidebar::before {
     background-image: url('/files/night.png');
 }
