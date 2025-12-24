@@ -33,6 +33,11 @@
   color:#d4b97f !important;
 }
 
+/* иконка темы прижата вправо */
+.flex-component > div:nth-child(2) {
+  margin-left: auto;
+}
+
 /* время публикации заметки */
 .section .meta time {
   font-size: 0.8em;
