@@ -5,7 +5,7 @@
   content:"";
   background-size:cover;
   width:100%;
-  height:184px;
+  min-height:184px;
   display:block;
   background-size: contain;
   background-repeat: no-repeat;
@@ -294,6 +294,7 @@ div.popover-hint div div h2 {
     width:40%;
     min-width:40%;
     height: 100%;
+    min-height:100px;
   }
   .article-title {
     margin:0 0 0;
