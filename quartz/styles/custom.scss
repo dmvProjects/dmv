@@ -314,3 +314,8 @@ div.popover-hint div div h2 {
   grid-template-columns: 8em 1fr;
   }
 }
+
+/* граница под заголовком для моб интерфейса */
+.left.sidebar {
+  border-bottom: 1px solid #808080;
+}
