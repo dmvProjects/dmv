@@ -302,11 +302,13 @@ div.popover-hint div div h2 {
 :root[saved-theme=dark] .callout[data-callout="quote"] {
   --bg: #acacac0f;
   --border: #ffffff1f;
+  --color: #8f8f8f;
 }
 
 :root[saved-theme=light] .callout[data-callout="quote"] {
   --bg: #0000000a;
   --border: #0000001f;
+  --color: #333;
 }
 
 .callout[data-callout="note"] {
