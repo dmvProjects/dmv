@@ -160,7 +160,7 @@ a.internal {
 
 /* фикс цвета разделителя в светлой теме */
 :root[saved-theme="light"] hr {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 ul.toc-content.overflow > li > a {
@@ -291,6 +291,18 @@ div.popover-hint div div h2 {
 .inline_spoiler:focus::before,
 .inline_spoiler:hover::before {
   opacity: 0;
+}
+
+/* фикс коллбека */
+.callout-title-inner > p {
+  font-weight: 400;
+  line-height: 1.3rem;
+}
+
+.callout-footer {
+  text-align: right;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
 }
 
 /* фиксы мобильного интерфейса */
