@@ -293,10 +293,24 @@ div.popover-hint div div h2 {
   opacity: 0;
 }
 
-/* фикс коллбека */
+/* фиксы коллбеков */
 .callout-title-inner > p {
   font-weight: 400;
   line-height: 1.3rem;
+}
+
+.callout[data-callout="note"] {
+  --bg: #6d44ff0f; 
+}
+
+:root[saved-theme=dark] .callout[data-callout="note"] {
+  --color: #958da8;
+  --border: #b344ff45;
+}
+
+:root[saved-theme=light] .callout[data-callout="note"] {
+  --color: #553d95;
+  --border: 0;
 }
 
 .callout-footer {
@@ -331,3 +345,4 @@ div.popover-hint div div h2 {
 .left.sidebar {
   border-bottom: 1px solid #808080;
 }
+
