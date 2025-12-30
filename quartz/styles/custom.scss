@@ -299,22 +299,31 @@ div.popover-hint div div h2 {
   line-height: 1.3rem;
 }
 
-:root[saved-theme=dark] .callout-title > .callout-title-inner > p {
-  color: color-mix(in srgb, var(--color) 75%, white);
+:root[saved-theme=dark] .callout[data-callout="quote"] {
+  --bg: #acacac0f;
+  --border: #ffffff1f;
+}
+
+:root[saved-theme=light] .callout[data-callout="quote"] {
+  --bg: #0000000a;
+  --border: #0000001f;
 }
 
 .callout[data-callout="note"] {
-  --bg: #6d44ff0f; 
+  --bg: #448aff10;
+  --border: #445d8630; 
 }
 
 :root[saved-theme=dark] .callout[data-callout="note"] {
-  --color: #958da8;
-  --border: #b344ff45;
+  --color: #7b97aa;
 }
 
 :root[saved-theme=light] .callout[data-callout="note"] {
-  --color: #553d95;
-  --border: 0;
+  --color: #284b63;
+}
+
+:root[saved-theme=dark] .callout-title > .callout-title-inner > p {
+  color: color-mix(in srgb, var(--color) 75%, white);
 }
 
 .callout-footer {
