@@ -294,9 +294,13 @@ div.popover-hint div div h2 {
 }
 
 /* фиксы коллбеков */
-.callout-title-inner > p {
+.callout-title > .callout-title-inner > p {
   font-weight: 400;
   line-height: 1.3rem;
+}
+
+:root[saved-theme=dark] .callout-title > .callout-title-inner > p {
+  color: color-mix(in srgb, var(--color) 75%, white);
 }
 
 .callout[data-callout="note"] {
