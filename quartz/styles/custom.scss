@@ -335,7 +335,11 @@ div.popover-hint div div h2 {
 }
 
 :root[saved-theme=dark] .callout-footer {
-  color: #ababab;
+  color: #979797;
+}
+
+:root[saved-theme=light] .callout-footer {
+  color: #808080;
 }
 
 /* фиксы мобильного интерфейса */
