@@ -5,7 +5,7 @@ date: 2025-11-11
 ---
 ___
 <div style="display: flex; justify-content: center; gap: clamp(3rem, 10%, 5em); margin: 1em 0; font-size: 1.2em;">
-  <a href="/%D0%92%D1%81%D1%91,-%D1%87%D1%82%D0%BE-%D0%B5%D1%81%D1%82%D1%8C/">Всё, что есть</a><a href="tags/">Теги</a><a href="/%D0%92%D1%81%D1%91,-%D1%87%D1%82%D0%BE-%D0%B5%D1%81%D1%82%D1%8C/%D0%9A%D0%BE%D1%80%D0%BE%D1%82%D0%BA%D0%BE">Коротко</a></div>
+  <a href="/%D0%92%D1%81%D1%91,-%D1%87%D1%82%D0%BE-%D0%B5%D1%81%D1%82%D1%8C/">Всё, что есть</a><a href="tags/">Теги</a><a href="/Коротко/">Коротко</a></div>
 
 ___
 
