@@ -13,6 +13,10 @@ ___
 Не знаю, как ты сюда попал. Почитай, если хочешь.
 
 ![[Pios.png]]
+—-
+![[pes-640-12.gif]]
+—-
+![[pes-800-20.gif]]
 
 <div class="audio-row">
   <audio controls>
