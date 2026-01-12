@@ -16,8 +16,6 @@ ___
   <img src="files/pes-800-20.gif" alt="">
 </div>
 
-![[pes-800-20.gif]]
-
 <div class="audio-row">
   <audio controls>
     <source src="/files/Жил-был-пёс_-_Ой_там_на_гори.mp3" type="audio/mpeg">
