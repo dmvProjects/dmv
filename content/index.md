@@ -12,6 +12,10 @@ ___
 Дневник обычного человека. Заметки, мысли, рефлексия.
 Не знаю, как ты сюда попал. Почитай, если хочешь.
 
+<div style="display: flex; justify-content: center;">
+  <img src="files/pes-800-20.gif" alt="">
+</div>
+
 ![[pes-800-20.gif]]
 
 <div class="audio-row">
