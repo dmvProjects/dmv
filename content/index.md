@@ -1,7 +1,7 @@
 ---
 title: Начало
 tags:
-date: 2025-11-11
+date: в одном селе жил когда-то Пёс...
 ---
 ___
 <div style="display: flex; justify-content: center; gap: clamp(3rem, 10%, 5em); margin: 1em 0; font-size: 1.2em;">
