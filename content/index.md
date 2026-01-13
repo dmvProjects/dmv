@@ -13,7 +13,7 @@ ___
 Не знаю, как ты сюда попал. Почитай, если хочешь.
 
 <div style="display: flex; justify-content: center;">
-  <img src="files/pes-800-20.gif" alt="">
+  <img src="files/pes2-800-20.gif" alt="">
 </div>
 
 <div class="audio-row">
