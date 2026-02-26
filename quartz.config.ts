@@ -76,7 +76,7 @@ const config: QuartzConfig = {
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.Remark42({ 
-        host: "https://dmv-perm.ru:65430", 
+        host: "https://rm.dmv-perm.ru", 
         site_id: "xn-----blcsksc7as0h3c.xn--p1ai", 
         no_footer: true, components: ["embed"], 
         locale: "ru", 
