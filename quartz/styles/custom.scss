@@ -380,7 +380,7 @@ div.popover-hint div div h2 {
 
 /* Карточка поста */
 .feed-post {
-  width: 92%;
+  width: 88%;
   margin: 0 auto 18px auto;
 
   border-radius: 14px;
@@ -424,8 +424,8 @@ div.popover-hint div div h2 {
   font-family: var(--headerFont);
   font-weight: 600;
   color: var(--dark);
-  font-size: 1.5rem;
-  margin-bottom: 8px;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
 }
 
 /* Дата */
@@ -433,4 +433,5 @@ div.popover-hint div div h2 {
   font-size: 0.75rem;
   opacity: 0.8;
   text-align: right;
+  margin-top: 12px;
 }
