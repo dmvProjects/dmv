@@ -378,3 +378,59 @@ div.popover-hint div div h2 {
   border-bottom: 1px solid #808080;
 }
 
+/* Карточка поста */
+.feed-post {
+  width: 92%;
+  margin: 0 auto 18px auto;
+
+  border-radius: 14px;
+  padding: 18px 20px;
+
+  backdrop-filter: blur(8px);
+
+  transition: box-shadow 0.15s ease, border 0.15s ease;
+
+  background: rgba(0, 0, 0, 0.04);
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.06),
+    0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+:root[saved-theme="light"] .feed-post {
+    background: rgba(0, 0, 0, 0.04);  
+  
+  border: 1px solid rgba(0, 0, 0, 0.08);  
+    
+  box-shadow:  
+  0 4px 10px rgba(0, 0, 0, 0.06),  
+  0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+:root[saved-theme="dark"] .feed-post {
+    background: rgba(255, 255, 255, 0.07);  
+  
+  border: 1px solid rgba(255, 255, 255, 0.12);  
+    
+  box-shadow:  
+  0 6px 16px rgba(0, 0, 0, 0.35),  
+  0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Заголовок (настраиваемый) */
+.feed-title {
+  font-family: var(--headerFont);
+  font-weight: 600;
+  color: var(--dark);
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+/* Дата */
+.feed-date {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  text-align: right;
+}
