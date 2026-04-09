@@ -16,7 +16,7 @@ const selected = tp.file.selection() || "Текст поста";
 tR += `<div class="feed-post">
   <div class="feed-title">Заголовок</div>
   <div class="feed-content">
-${selected}
+<p>${selected}</p>
   </div>
   <div class="feed-date">${dateStr}</div>
 </div><br>`;
